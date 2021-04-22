@@ -1,8 +1,9 @@
 from flask import abort
 import os
 
-AUTHENTICATION_TOKEN = os.environ.get("authentication_token", "default_token")
-OPSGENIE_WEBHOOK = ""
+AUTHENTICATION_TOKEN = os.environ.get("AUTHENTICATION_TOKEN", "default_token")
+OPSGENIE_WEBHOOK_URL = os.environ.get("OPSGENIE_WEBHOOK_URL", "")
+OPSGENIE_API_TOKEN = os.environ.get("OPSGENIE_API_TOKEN", "")
 
 
 def verify_token(given_token):
