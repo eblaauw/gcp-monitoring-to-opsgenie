@@ -27,13 +27,10 @@ def verify_token(given_token):
 
 
 def handler(request):
-    """[summary]
+    """Collect the request, validate the request and send the request to send_opsgenie_alert
 
     Args:
         request: Incoming request
-
-    Returns:
-        str|func: Returns an 200 OK or an abort
     """
     if request.method == "POST":
         if verify_token(request.args.get("authentication_token")):
@@ -45,6 +42,11 @@ def handler(request):
 
 
 def send_opsgenie_alert(json_object):
+    """Sends an alert to opsgenie
+
+        Args:
+            json_object: Sends the formatted JSON to the Opsgenie server
+        """
     message = str(
         "[GCP Message]: "
         + json_object["incident"]["condition_name"]
