@@ -2,17 +2,17 @@
    "incident":{
       "incident_id":"0.m1l5gts9j38b",
       "resource_id":"",
-      "resource_name":"tlb-data-prod gk3-data-api-cluster-3-default-pool-ebe2dc87-vm3f",
+      "resource_name":"project-name gk3-cluster-name-default-pool-ebe2dc87-vm3f",
       "resource":{
          "type":"k8s_node",
          "labels":{
             "cluster_name":"data-api-cluster-3",
             "location":"europe-west2",
-            "node_name":"gk3-data-api-cluster-3-default-pool-ebe2dc87-vm3f",
-            "project_id":"tlb-data-prod"
+            "node_name":"gk3-cluster-name-default-pool-ebe2dc87-vm3f",
+            "project_id":"project-name"
          }
       },
-      "resource_display_name":"gk3-data-api-cluster-3-default-pool-ebe2dc87-vm3f",
+      "resource_display_name":"gk3-cluster-name-default-pool-ebe2dc87-vm3f",
       "resource_type_display_name":"Kubernetes Node",
       "metric":{
          "type":"kubernetes.io/node/memory/used_bytes",
@@ -22,7 +22,7 @@
       "policy_name":"testje",
       "condition_name":"HIGH [cpu]",
       "condition":{
-         "name":"projects/tlb-data-prod/alertPolicies/15016694874558836060/conditions/15016694874558836559",
+         "name":"projects/project-name/alertPolicies/15016694874558836060/conditions/15016694874558836559",
          "displayName":"HIGH [cpu]",
          "conditionThreshold":{
             "filter":"metric.type=\"kubernetes.io/node/memory/used_bytes\" resource.type=\"k8s_node\"",
@@ -40,10 +40,10 @@
             }
          }
       },
-      "url":"https://console.cloud.google.com/monitoring/alerting/incidents/0.m1l5gts9j38b?project=tlb-data-prod",
+      "url":"https://console.cloud.google.com/monitoring/alerting/incidents/0.m1l5gts9j38b?project=project-name",
       "state":"open",
       "ended_at":"None",
-      "summary":"Memory usage for tlb-data-prod gk3-data-api-cluster-3-default-pool-ebe2dc87-vm3f with metric labels {memory_type=evictable} is above the threshold of 1000000000 with a value of 2760205107.200."
+      "summary":"Memory usage for project-name gk3-cluster-name-default-pool-ebe2dc87-vm3f with metric labels {memory_type=evictable} is above the threshold of 1000000000 with a value of 2760205107.200."
    },
    "version":"1.2"
 }
